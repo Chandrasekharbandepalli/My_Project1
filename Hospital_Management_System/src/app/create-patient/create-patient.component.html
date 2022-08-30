@@ -1,0 +1,50 @@
+<div class="container">
+  <div class=" row col-mod-5 col-md-offset-5">
+    <div class="panel panel-primary">
+       <div class="panel-heading text-center">
+       <br>
+           <h3 class="text">Patient Registration</h3>
+       </div>
+    </div>
+<div class="panel-body">
+             <form >
+               <div class="form-group">
+                      <label for="Name"><b> Name:</b> </label>
+                      <input  type="text" class="form-control" id="patientName" [(ngModel)]="patient.name" 
+                       name="patientName" placeholder="Enter FullName" />
+                  </div>
+                  <div class="form-group">
+                      <label for="dateOfVisit"><b> Date of Visit:</b></label>
+                      <input type="date" class="form-control" id="dateOfVisit" [(ngModel)]="patient.dateOfVisit"  
+                      name="dateOfVisit"  placeholder="Enter Appointment Date" />
+                  </div>
+                  <div class="form-group">
+                      <label for="visitedDoctor"><b>Select Vistited Doctor:</b></label>
+
+                      <select class="form-control" [(ngModel)]="patient.visitedDoctor" name="Id" >  
+                        <option selected="" value=""></option>  
+      
+                     <option [ngValue]="doc.id" *ngFor="let doc of doctors">  
+                            {{doc.name}}  
+                  </option>  
+             </select> 
+                      
+                  </div>
+                  <div class="form-group">
+                      <label for="precription"><b> Prescription:</b></label>
+                      <input type="text" [(ngModel)]="patient.prescription"  name="precription" id="precription"
+                          class="form-control"  placeholder="Enter Prescription" /><br>
+                  </div>
+
+                  
+
+                  <div class="form-group">
+                      <input class="btn btn-success " type="submit" name="submit_registration" value="Register" (click)="patientRegistration()" >
+                  </div>
+              
+          </form>
+          </div>
+        </div>
+        
+      </div>
+    

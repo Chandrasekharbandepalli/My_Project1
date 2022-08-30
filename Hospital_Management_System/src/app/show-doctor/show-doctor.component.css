@@ -1,0 +1,26 @@
+.hd 
+{
+    border: 1px solid black;
+    background-color:greenyellow;
+    column-gap: 2px;
+} 
+
+.gee th,tr,td{
+    border:1px solid black;
+    width: 10%;
+
+}
+
+.loc 
+{
+    background-color: cadetblue;
+}
+
+.th {
+    padding-right: 10px;
+}
+
+h4 {
+    color: rgb(219, 108, 17);
+
+}

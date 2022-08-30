@@ -1,0 +1,48 @@
+<div class="container">
+   <div class=" row col-mod-5 col-md-offset-5">
+     <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+        <br>
+            <h3 class="text">Doctor Registration</h3>
+        </div>
+     </div>
+<div class="panel-body">
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label for="Name"><b>Name</b></label>
+            <input type="text" class ="form-control" id = "Name" [(ngModel)] = "doctor.name" name = "Name">
+        </div>
+
+        <div class="form-group">
+            <label for="age"><b>Age</b></label>
+            <input type="number" class ="form-control" id = "age" [(ngModel)] = "doctor.age" name = "age">
+        </div>
+
+        <div class="form-group">
+            <label for="gender"><b>Gender</b></label>
+            <div>
+                <div>
+                    <input id="Male" type="radio" value="Male" [(ngModel)] = "doctor.gender" name="gender" >
+                    <label for="Male"><b>Male</b></label>
+                </div>
+                <div>
+                    <input id="Female" type="radio" value="Female" [(ngModel)] = "doctor.gender" name="gender">
+                    <label for="Female"><b>Female</b></label>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="specialist"> <b>Specialist</b></label>
+                <input type="text" class ="form-control" id = "specialist" [(ngModel)] = "doctor.specialist" name = "specialist">
+            </div>
+            <div class="form-group">
+                <label for="patients"><b>Patients attended</b></label>
+                <input type="number" class ="form-control" id = "patients"  [(ngModel)] = "doctor.numberOfPatients" name = "patients">
+            </div> 
+            <br/>
+    
+        <button class = "btn btn-primary" type ="submit"><b>Submit</b></button>
+    </form>
+    </div>
+    </div>
+    </div>

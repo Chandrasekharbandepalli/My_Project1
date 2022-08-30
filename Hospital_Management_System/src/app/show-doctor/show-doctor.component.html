@@ -1,0 +1,48 @@
+
+  <div class="container">
+     <div class="table">
+     
+                <h3 style="text-align: center"> Doctor Information</h3>
+                <div class="cha">
+                 <h4><b>Please select doctor</b></h4> 
+                  <select class="form-control" [(ngModel)]="doctId" name="Id" (change)="selectName(doctId);">  
+                    <option selected="" value=""></option>  
+                 <option [ngValue]="dc.id" *ngFor="let dc of doctors">  
+                     {{dc.name}}  
+              </option>  
+         </select> 
+         <div *ngIf="doctemp">
+                  <table class="gee">
+                    <thead class="hd">
+                      <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Speciality</th>
+                        <th>Patients Attended</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody class="loc">
+                      <tr>
+                        <td>{{ doci.id }}</td>
+                        <td>{{ doci.name }}</td>
+                        <td>{{ doci.age }}</td>
+                        <td>{{ doci.gender }}</td>
+                        <td>{{ doci.specialist }}</td>
+                        <td>{{ doci.numberOfPatients }}</td>
+                         </tr>
+                    </tbody>
+  
+                    <tbody></tbody>
+                  </table>
+                  
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="back()">Back</button>
+              </div>
+  </div>
+  
+  
+  
